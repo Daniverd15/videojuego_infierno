@@ -112,10 +112,14 @@ public class New_CharacterController : MonoBehaviour
 
     void updateAnimator()
     {
-    float SpeedPercent = IsMoving ? (currentSpeed == SprintSpeed ? 1f : 0.5f) : 0f;
-    animator?.SetFloat("Speed", SpeedPercent, 0.1f, Time.deltaTime);
-    animator?.SetBool("IsGrounded", IsGrounded);
-    animator?.SetFloat("VerticalSpeed", Velocity.y);
+        float SpeedPercent = IsMoving ? (currentSpeed == SprintSpeed ? 1f : 0.5f) : 0f;
+        animator?.SetFloat("Speed", SpeedPercent, 0.1f, Time.deltaTime);
+        animator?.SetBool("IsGrounded", IsGrounded);
+        animator?.SetFloat("VerticalSpeed", Velocity.y);
     }
 
+    public void SetExternalVelocity(Vector3 platformVelocity)
+    {
+        externalVelocity = platformVelocity;
+    }
 }
