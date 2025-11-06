@@ -31,13 +31,15 @@ public class CollectibleManagerS : MonoBehaviour
 
                 Collider col = obj.GetComponent<Collider>();
                 if (col == null)
-                  col = obj.gameObject.AddComponent<BoxCollider>();    
+                    col = obj.gameObject.AddComponent<BoxCollider>();
                 col.isTrigger = true;
 
                 if (obj.GetComponent<PlayerCollectibleDetector>() == null)
-                obj.gameObject.AddComponent<PlayerCollectibleDetector>().Init(this);
+                    obj.gameObject.AddComponent<PlayerCollectibleDetector>().Init(this);
             }
         }
+
+        UpdatedCounterUI();
     }
 
     // Update is called once per frame

@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PlayerCollectibleDetector : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private CollectibleManagerS manager;
+
+    public void Init(CollectibleManagerS manager)
     {
-        
+        this.manager = manager;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+           manager.Collect(transform);
+        }
     }
 }
