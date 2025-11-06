@@ -1,11 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class CollectibleManagerS : MonoBehaviour
 {
-
     [Header("Secuencia Movimiento")]
     public float amplitud = 0.25f;
     public float speed = 2f;
@@ -20,58 +18,74 @@ public class CollectibleManagerS : MonoBehaviour
     [Header("Lista de objetos")]
     public List<Transform> collectibles = new List<Transform>();
     private Dictionary<Transform, Vector3> startPosition = new Dictionary<Transform, Vector3>();
-    // Start is called before the first frame update
+
+    [Header("Referencias")]
+    [SerializeField] private GameTimer timer;     // ⬅️ arrástralo en el Inspector
+
     void Start()
     {
+        // fallback por si olvidaste asignarlo
+        if (timer == null) timer = FindObjectOfType<GameTimer>(true);
+
         foreach (var obj in collectibles)
         {
-            if (obj != null)
-            {
-                startPosition[obj] = obj.position;
+            if (obj == null) continue;
 
-                Collider col = obj.GetComponent<Collider>();
-                if (col == null)
-                    col = obj.gameObject.AddComponent<BoxCollider>();
-                col.isTrigger = true;
+            startPosition[obj] = obj.position;
 
-                if (obj.GetComponent<PlayerCollectibleDetector>() == null)
-                    obj.gameObject.AddComponent<PlayerCollectibleDetector>().Init(this);
-            }
+            var col = obj.GetComponent<Collider>();
+            if (col == null) col = obj.gameObject.AddComponent<BoxCollider>();
+            col.isTrigger = true;
+
+            if (obj.GetComponent<PlayerCollectibleDetector>() == null)
+                obj.gameObject.AddComponent<PlayerCollectibleDetector>().Init(this);
         }
 
         UpdatedCounterUI();
     }
 
-    // Update is called once per frame
     void Update()
     {
-       foreach (var obj in collectibles)
-       {
-          if (obj == null) continue;
+        foreach (var obj in collectibles)
+        {
+            if (obj == null) continue;
 
-           Vector3 StartPos = startPosition[obj];
-          float newY = StartPos.y + Mathf.Sin(Time.time * speed) * amplitud;
-          obj.position = new Vector3(StartPos.x, newY, StartPos.z);
-
-          obj.Rotate(Vector3.up, rotationSpeed * Time.deltaTime, Space.World);
-       }
+            Vector3 StartPos = startPosition[obj];
+            float newY = StartPos.y + Mathf.Sin(Time.time * speed) * amplitud;
+            obj.position = new Vector3(StartPos.x, newY, StartPos.z);
+            obj.Rotate(Vector3.up, rotationSpeed * Time.deltaTime, Space.World);
+        }
     }
 
     public void Collect(Transform obj)
     {
-       if (!collectibles.Contains(obj)) return;
+        if (!collectibles.Contains(obj)) return;
 
-       collectibles.Remove(obj);
-       itemsCollected++;
-       UpdatedCounterUI();
-       Destroy(obj.gameObject);
+        // ⬇️ SUMA TIEMPO si este ítem tiene TimeBonus
+        var bonus = obj.GetComponent<TimeBonus>();
+        if (bonus != null)
+        {
+            if (timer == null) timer = FindObjectOfType<GameTimer>(true);
+            if (timer != null)
+            {
+                timer.AddTime(bonus.secondsToAdd);
+                Debug.Log($"[CollectibleManagerS] +{bonus.secondsToAdd}s al timer");
+            }
+            else
+            {
+                Debug.LogWarning("[CollectibleManagerS] No se encontró GameTimer en la escena.");
+            }
+        }
+
+        collectibles.Remove(obj);
+        itemsCollected++;
+        UpdatedCounterUI();
+        Destroy(obj.gameObject);
     }
-    
+
     void UpdatedCounterUI()
     {
         if (itemCounter != null)
-        {
-           itemCounter.text = $"{itemsCollected} / {totalItemsScene}";
-        }
+            itemCounter.text = $"{itemsCollected} / {totalItemsScene}";
     }
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 
-
 public class New_CharacterController : MonoBehaviour
 {
     [Header("Movimiento")]
@@ -23,42 +22,28 @@ public class New_CharacterController : MonoBehaviour
     private Vector3 Velocity;
     private float currentSpeed;
     private float yaw;
-    private Vector3 externalVelocity = Vector3.zero;
-
 
     public bool IsMoving { get; private set; }
     public Vector2 CurrentInput { get; private set; }
     public bool IsGrounded { get; private set; }
     public float CurrentYaw => yaw;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is enabled
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    // Update is called once per frame
     void Update()
     {
         HandleMovement();
         HandleRotation();
         updateAnimator();
-
     }
-
 
     void HandleMovement()
     {
-        IsGrounded = characterController.isGrounded; // verificación de tocar o no el suelo
-
-        if (IsGrounded && Velocity.y < 0)
-        {
-            if (externalVelocity.y > -0.05f && externalVelocity.y < 0.05f)
-                Velocity.y = 0;
-            else
-                Velocity.y = -2f;
-        }
+        IsGrounded = characterController.isGrounded;
 
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -73,26 +58,44 @@ public class New_CharacterController : MonoBehaviour
             moveDirection = Quaternion.Euler(0f, cameraTransform.eulerAngles.y, 0f) * inputDirection;
             bool isSprinting = Input.GetKey(KeyCode.LeftShift);
             currentSpeed = isSprinting ? SprintSpeed : WalkSpeed;
-
         }
 
-        if (Input.GetButtonDown("Jump") && IsGrounded)
+        // Detectar si estamos sobre una plataforma móvil (por parenting)
+        bool onPlatform = transform.parent != null && transform.parent.CompareTag("MovingPlatform");
+
+        // Si no está en plataforma, usar gravedad normal
+        if (!onPlatform)
         {
-            Velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            animator?.SetBool("isJumping", true);
-        }
-        Velocity.y += gravity * Time.deltaTime;
+            if (IsGrounded && Velocity.y < 0f)
+            {
+                Velocity.y = -2f;
+            }
 
-        Vector3 finalMovement = (moveDirection * currentSpeed + externalVelocity) * Time.deltaTime;
+            if (Input.GetButtonDown("Jump") && IsGrounded)
+            {
+                Velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+                animator?.SetBool("isJumping", true);
+            }
+
+            Velocity.y += gravity * Time.deltaTime;
+        }
+        else
+        {
+            // Si está sobre una plataforma, mantenerlo pegado a ella sin saltitos
+            Velocity.y = -2f;
+        }
+
+        // Aplicar movimiento
+        Vector3 finalMovement = (moveDirection * currentSpeed) * Time.deltaTime;
         finalMovement.y += Velocity.y * Time.deltaTime;
 
         characterController.Move(finalMovement);
 
+        // Si está en el suelo, terminar animación de salto
         if (IsGrounded && Velocity.y < 0f)
         {
             animator?.SetBool("isJumping", false);
         }
-
     }
 
     void HandleRotation()
@@ -103,9 +106,9 @@ public class New_CharacterController : MonoBehaviour
         if (IsMoving)
         {
             transform.rotation = Quaternion.Slerp(
-            transform.rotation,
-            Quaternion.Euler(0f, yaw, 0f),
-            rotationSpeed * Time.deltaTime
+                transform.rotation,
+                Quaternion.Euler(0f, yaw, 0f),
+                rotationSpeed * Time.deltaTime
             );
         }
     }
@@ -116,10 +119,5 @@ public class New_CharacterController : MonoBehaviour
         animator?.SetFloat("Speed", SpeedPercent, 0.1f, Time.deltaTime);
         animator?.SetBool("IsGrounded", IsGrounded);
         animator?.SetFloat("VerticalSpeed", Velocity.y);
-    }
-
-    public void SetExternalVelocity(Vector3 platformVelocity)
-    {
-        externalVelocity = platformVelocity;
     }
 }

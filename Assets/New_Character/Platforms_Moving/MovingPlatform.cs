@@ -1,68 +1,62 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    [Header("Configuración de la plataforma")]
-    [Tooltip("Altura mínima de la plataforma en unidades del mundo")]
+    [Header("Configuración de la plataforma (offsets verticales)")]
+    [Tooltip("Altura mínima relativa (desde la posición inicial)")]
     [SerializeField] private float minHeight = 0f;
 
-    [Tooltip("Altura máxima de la plataforma en unidades del mundo")]
-    [SerializeField] private float maxHeight = 0f;
+    [Tooltip("Altura máxima relativa (desde la posición inicial)")]
+    [SerializeField] private float maxHeight = 3f;
 
-    [Tooltip("Velocidad de movimiento en unidades / s")]
+    [Tooltip("Velocidad en unidades/seg")]
     [SerializeField] private float speed = 2f;
-    private bool movingUp = true;
+
     private Vector3 initialPosition;
-    // Start is called before the first frame update
+    private float baseY;
+    private float travel; // distancia total (max-min)
+
     void Start()
     {
         initialPosition = transform.position;
+        // Línea base: y inicial + minOffset
+        baseY = initialPosition.y + minHeight;
+        // Recorrido total
+        travel = Mathf.Max(0f, maxHeight - minHeight);
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    // Usa Update cuando mueves transform directamente (más suave)
+    void Update()
     {
-        float currentHeight = transform.position.y;
-        Vector3 movement = movingUp ? Vector3.up : Vector3.down;
-        movement *= speed * Time.deltaTime;
+        if (travel <= 0f) return;
 
-        transform.Translate(movement);
-
-        float maxY = initialPosition.y + maxHeight;
-        float minY = initialPosition.y + minHeight;
-
-        if (transform.position.y > maxY)
-        {
-            transform.position = new Vector3(transform.position.x, maxY, transform.position.z);
-            movingUp = false;
-        }
-        else if (transform.position.y < minY)
-        {
-            transform.position = new Vector3(transform.position.x, minY, transform.position.z);
-            movingUp = true;
-        }
+        // PingPong recorre [0, travel] y vuelve sin "clavar"
+        float y = baseY + Mathf.PingPong(Time.time * speed, travel);
+        transform.position = new Vector3(initialPosition.x, y, initialPosition.z);
     }
 
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Vector3 minPoint = new Vector3(transform.position.x, transform.position.y + minHeight, transform.position.z);
-        Vector3 maxPoint = new Vector3(transform.position.x, transform.position.y + maxHeight, transform.position.z);
-
-        Gizmos.DrawLine(minPoint, maxPoint);
-        Gizmos.DrawWireSphere(minPoint, 0.2f);
-        Gizmos.DrawWireSphere(maxPoint, 0.2f);
+        Vector3 p0 = new Vector3(transform.position.x, (Application.isPlaying ? initialPosition.y : transform.position.y) + minHeight, transform.position.z);
+        Vector3 p1 = new Vector3(transform.position.x, (Application.isPlaying ? initialPosition.y : transform.position.y) + maxHeight, transform.position.z);
+        Gizmos.DrawLine(p0, p1);
+        Gizmos.DrawWireSphere(p0, 0.15f);
+        Gizmos.DrawWireSphere(p1, 0.15f);
     }
-    
+
+    // Parenting clásico (igual que tu enfoque original)
     void OnTriggerEnter(Collider other)
     {
-    other.transform.SetParent(transform);
+        Transform root = other.transform.root;
+        if (!root.CompareTag("Player")) return;
+        root.SetParent(transform);
     }
 
     void OnTriggerExit(Collider other)
     {
-       other.transform.SetParent(null);
+        Transform root = other.transform.root;
+        if (!root.CompareTag("Player")) return;
+        root.SetParent(null);
     }
 }
