@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DeadZone
   - Collectible
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
