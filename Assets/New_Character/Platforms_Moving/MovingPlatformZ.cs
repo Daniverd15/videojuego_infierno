@@ -45,8 +45,6 @@ public class MovingPlatformZ : MonoBehaviour
     private float currentZ;
     private bool movingForward;
     private float delayTimer;
-    // Bandera para evitar llamadas múltiples a la corrutina de aplastamiento
-    private bool isCrushing = false; 
 
     private void Start()
     {
@@ -94,93 +92,5 @@ public class MovingPlatformZ : MonoBehaviour
         Gizmos.DrawLine(p0, p1);
         Gizmos.DrawWireSphere(p0, 0.15f);
         Gizmos.DrawWireSphere(p1, 0.15f);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Transform root = other.transform.root;
-        if (!root.CompareTag(playerTag)) return;
-
-        // Parent player to platform for movement (Solo le decimos que se mueva con nosotros)
-        root.SetParent(transform);
-    }
-
-    // NUEVA LÓGICA: Comprueba el aplastamiento continuo
-    private void OnTriggerStay(Collider other)
-    {
-        Transform root = other.transform.root;
-        if (!root.CompareTag(playerTag)) return;
-
-        // La plataforma está en su posición final de aplastamiento (Max Depth)
-        // Puedes cambiar la condición a <= initialPosition.z + minDepth si el aplastamiento es al inicio.
-        bool atCrushPosition = currentZ >= initialPosition.z + maxDepth; 
-
-        // Si el jugador está dentro y estamos en la posición de aplastamiento Y la corrutina no está activa
-        if (atCrushPosition && !isCrushing)
-        {
-            LiveSystem liveSystem = root.GetComponent<LiveSystem>();
-            if (liveSystem != null)
-            {
-                StartCoroutine(ShrinkPlayerAndRespawn(root, liveSystem));
-            }
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        Transform root = other.transform.root;
-        if (!root.CompareTag(playerTag)) return;
-
-        // Unparent player from platform
-        root.SetParent(null);
-    }
-
-    private IEnumerator ShrinkPlayerAndRespawn(Transform playerTransform, LiveSystem liveSystem)
-    {
-        isCrushing = true; // Establecer la bandera para evitar llamadas múltiples
-        
-        Vector3 originalScale = playerTransform.localScale;
-        Vector3 targetScale = originalScale;
-
-        if (shrinkAxis == ScaleShrinkAxis.X)
-        {
-            targetScale.x *= shrinkFactor;
-        }
-        else if (shrinkAxis == ScaleShrinkAxis.Z)
-        {
-            targetScale.z *= shrinkFactor;
-        }
-
-        // Smooth scale down over 0.5 seconds
-        float elapsed = 0f;
-        float duration = 0.5f;
-        while (elapsed < duration)
-        {
-            playerTransform.localScale = Vector3.Lerp(originalScale, targetScale, elapsed / duration);
-            elapsed += Time.deltaTime;
-            yield return null;
-        }
-        playerTransform.localScale = targetScale;
-
-        // Small delay at minimum scale
-        yield return new WaitForSeconds(0.5f);
-
-        // Decrement life and respawn player
-        liveSystem.SendMessage("DecreaseLifeAndRespawn", SendMessageOptions.DontRequireReceiver);
-
-        // Restore scale smoothly over 0.5 seconds
-        elapsed = 0f;
-        while (elapsed < duration)
-        {
-            playerTransform.localScale = Vector3.Lerp(targetScale, originalScale, elapsed / duration);
-            elapsed += Time.deltaTime;
-            yield return null;
-        }
-        playerTransform.localScale = originalScale;
-
-        // Unparent player (if respawn does not do it)
-        playerTransform.SetParent(null);
-
-        isCrushing = false; // Reset flag
     }
 }

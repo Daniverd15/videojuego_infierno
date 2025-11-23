@@ -45,7 +45,7 @@ public class LiveSystem : MonoBehaviour
 
             if (currentLives <= -1)
             {
-                SceneManager.LoadScene("SampleScene");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);;
             }
             else
             {

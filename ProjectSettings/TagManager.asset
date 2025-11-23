@@ -7,6 +7,10 @@ TagManager:
   - DeadZone
   - Collectible
   - MovingPlatform
+  - HarmfulPlatform
+  - ChaserSurface
+  - FallingPlatform
+  - Cruz
   layers:
   - Default
   - TransparentFX

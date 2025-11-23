@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Infierno.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Defeat.unity
+    guid: aa0abde7d1ad98f4b97d011549322b58
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: a0fb4dacb8540374cbe0dc46c61155b7
+  - enabled: 1
+    path: Assets/Scenes/Cielo.unity
+    guid: 683a0ca951e647b49b4e4ca525b808ba
   m_configObjects: {}

@@ -1,0 +1,109 @@
+{
+        Debug.Log($"[FallingPlatform] Trigger ENTER -> {other.name} | Root: {other.transform.root.name} | Tag: {other.transform.root.tag}");
+
+        Transform root = other.transform.root;
+
+        if (!root.CompareTag("Player"))
+        {
+            Debug.Log("[FallingPlatform] Ignorado: Root NO tiene tag Player.");
+            return;
+        }
+
+        // Asegura que este objeto tenga el tag FallingPlatform
+        if (!CompareTag("FallingPlatform"))
+        {
+            Debug.LogWarning("[FallingPlatform] Este objeto NO tiene el tag 'FallingPlatform'!");
+            return;
+        }
+
+        Debug.Log("[FallingPlatform] Player detectado en plataforma inestable!");
+
+        // Iniciar secuencia de caída si no está cayendo ya
+        if (!isFalling && fallCoroutine == null)
+        {
+            fallCoroutine = StartCoroutine(FallSequence());
+        }
+
+        // Parent del jugador para moverse con la plataforma
+        root.SetParent(transform);
+    }
+=======
+    /*
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log($"[FallingPlatform] Trigger ENTER -> {other.name} | Root: {other.transform.root.name} | Tag: {other.transform.root.tag}");
+
+        Transform root = other.transform.root;
+
+        if (!root.CompareTag("Player"))
+        {
+            Debug.Log("[FallingPlatform] Ignorado: Root NO tiene tag Player.");
+            return;
+        }
+
+        // Asegura que este objeto tenga el tag FallingPlatform
+        if (!CompareTag("FallingPlatform"))
+        {
+            Debug.LogWarning("[FallingPlatform] Este objeto NO tiene el tag 'FallingPlatform'!");
+            return;
+        }
+
+        Debug.Log("[FallingPlatform] Player detectado en plataforma inestable!");
+
+        // Iniciar secuencia de caída si no está cayendo ya
+        if (!isFalling && fallCoroutine == null)
+        {
+            fallCoroutine = StartCoroutine(FallSequence());
+        }
+
+        // Parent del jugador para moverse con la plataforma
+        root.SetParent(transform);
+    }
+    */
+>>>>>>> REPLACE
+=======
+    private void OnTriggerExit(Collider other)
+    {
+        Transform root = other.transform.root;
+
+        if (!root.CompareTag("Player"))
+            return;
+
+        Debug.Log("[FallingPlatform] Player salió de la plataforma!");
+
+        // Quitar parent
+        root.SetParent(null);
+    }
+=======
+    /*
+    private void OnTriggerExit(Collider other)
+    {
+        Transform root = other.transform.root;
+
+        if (!root.CompareTag("Player"))
+            return;
+
+        Debug.Log("[FallingPlatform] Player salió de la plataforma!");
+
+        // Quitar parent
+        root.SetParent(null);
+    }
+    */
+>>>>>>> REPLACE
+=======
+    private bool isFalling = false;
+    private Coroutine fallCoroutine;
+=======
+    private bool isFalling = false;
+    private Coroutine fallCoroutine;
+
+    /// <summary>
+    /// Public method to start the fall sequence if not already falling
+    /// </summary>
+    public void StartFalling()
+    {
+        if (!isFalling && fallCoroutine == null)
+        {
+            fallCoroutine = StartCoroutine(FallSequence());
+        }
+    }

@@ -11,9 +11,12 @@ public class CollectibleManagerS : MonoBehaviour
 
     [Header("Sistema Recolección")]
     public TextMeshProUGUI itemCounter;
+    public TextMeshProUGUI crossCounter; // New UI element for crosses count
     public int totalItemsScene = 2;
     public string collectibleTag = "Collectible";
+    public string crossTag = "Cruz"; // Assuming crosses have this tag
     private static int itemsCollected = 0;
+    private int crossesCollected = 0; // New count for crosses collected
 
     [Header("Lista de objetos")]
     public List<Transform> collectibles = new List<Transform>();
@@ -42,6 +45,7 @@ public class CollectibleManagerS : MonoBehaviour
         }
 
         UpdatedCounterUI();
+        UpdateCrossesUI();
     }
 
     void Update()
@@ -78,8 +82,19 @@ public class CollectibleManagerS : MonoBehaviour
         }
 
         collectibles.Remove(obj);
-        itemsCollected++;
-        UpdatedCounterUI();
+
+        // Check if collectible is a cross (by tag)
+        if (obj.CompareTag(crossTag))
+        {
+            crossesCollected++;
+            UpdateCrossesUI();
+        }
+        else
+        {
+            itemsCollected++;
+            UpdatedCounterUI();
+        }
+
         Destroy(obj.gameObject);
     }
 
@@ -87,5 +102,11 @@ public class CollectibleManagerS : MonoBehaviour
     {
         if (itemCounter != null)
             itemCounter.text = $"{itemsCollected} / {totalItemsScene}";
+    }
+
+    void UpdateCrossesUI()
+    {
+        if (crossCounter != null)
+            crossCounter.text = $"{crossesCollected}";
     }
 }
