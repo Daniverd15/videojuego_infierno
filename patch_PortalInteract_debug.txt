@@ -1,0 +1,82 @@
+{
+		if (playerInRange && Input.GetKeyDown(KeyCode.E))
+		{
+			if (collectibleManager != null && collectibleManager.CrossesComplete())
+			{
+				int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 3;
+				SceneManager.LoadScene(nextSceneIndex);
+			}
+			else
+			{
+				ShowPortalMessage("No se tienen todas las 4 cruces. No puedes usar el portal.");
+			}
+		}
+	}
+=======
+	void Update()
+	{
+		if (playerInRange)
+		{
+			Debug.Log("Player in range of portal. Checking crosses...");
+			if (collectibleManager != null)
+			{
+				bool crossesComplete = collectibleManager.CrossesComplete();
+				Debug.Log($"CrossesComplete() returned: {crossesComplete}");
+
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					if (crossesComplete)
+					{
+						int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 3;
+						Debug.Log($"Loading next scene with index: {nextSceneIndex}");
+						SceneManager.LoadScene(nextSceneIndex);
+					}
+					else
+					{
+						ShowPortalMessage("No se tienen todas las 4 cruces. No puedes usar el portal.");
+					}
+				}
+			}
+		}
+	}
+>>>>>>> REPLACE
+<<<<<<< SEARCH
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.CompareTag("Player") && CompareTag("PortalCielo"))
+		{
+			playerInRange = true;
+
+			if (collectibleManager != null && collectibleManager.CrossesComplete())
+			{
+				ShowPortalMessage("Cruces completas, pulsa E para usar el portal y llegar al cielo (BONUS LEVEL)");
+			}
+			else
+			{
+				ShowPortalMessage("No se tienen todas las 4 cruces. No puedes usar el portal.");
+			}
+		}
+	}
+=======
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.CompareTag("Player") && CompareTag("PortalCielo"))
+		{
+			playerInRange = true;
+
+			if (collectibleManager != null)
+			{
+				bool crossesComplete = collectibleManager.CrossesComplete();
+				Debug.Log($"OnTriggerEnter: CrossesComplete() returned: {crossesComplete}");
+
+				if (crossesComplete)
+				{
+					ShowPortalMessage("Cruces completas, pulsa E para usar el portal y llegar al cielo (BONUS LEVEL)");
+				}
+				else
+				{
+					ShowPortalMessage("No se tienen todas las 4 cruces. No puedes usar el portal.");
+				}
+			}
+		}
+	}

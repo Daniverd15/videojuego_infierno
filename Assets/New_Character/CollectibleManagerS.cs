@@ -12,11 +12,14 @@ public class CollectibleManagerS : MonoBehaviour
     [Header("Sistema Recolección")]
     public TextMeshProUGUI itemCounter;
     public TextMeshProUGUI crossCounter; // New UI element for crosses count
+    public TextMeshProUGUI crossBonusMessage; // New UI element for bonus message
     public int totalItemsScene = 2;
     public string collectibleTag = "Collectible";
     public string crossTag = "Cruz"; // Assuming crosses have this tag
+    
+    // 🔑 Mantenemos el conteo de cruces estático (global)
     private static int itemsCollected = 0;
-    private int crossesCollected = 0; // New count for crosses collected
+    private static int crossesCollected = 0; 
 
     [Header("Lista de objetos")]
     public List<Transform> collectibles = new List<Transform>();
@@ -87,6 +90,7 @@ public class CollectibleManagerS : MonoBehaviour
         if (obj.CompareTag(crossTag))
         {
             crossesCollected++;
+            Debug.Log($"[CollectibleManagerS] Cross collected. Current crossesCollected: {crossesCollected}");
             UpdateCrossesUI();
         }
         else
@@ -96,6 +100,9 @@ public class CollectibleManagerS : MonoBehaviour
         }
 
         Destroy(obj.gameObject);
+
+        // DEBUG: Log current counts after destruction
+        Debug.Log($"[CollectibleManagerS] Collect(): crossesCollected={crossesCollected}, itemsCollected={itemsCollected}, collectibles.Count={collectibles.Count}");
     }
 
     void UpdatedCounterUI()
@@ -108,5 +115,25 @@ public class CollectibleManagerS : MonoBehaviour
     {
         if (crossCounter != null)
             crossCounter.text = $"{crossesCollected}";
+
+        if (crossBonusMessage != null)
+        {
+            if (CrossesComplete())
+            {
+                crossBonusMessage.text = "cruces completas, vuelve al pentagrama para llegar al cielo (BONUS LEVEL)";
+            }
+            else
+            {
+                crossBonusMessage.text = "";
+            }
+        }
+    }
+
+    // 🔑 CAMBIO CLAVE: El método es estático y no necesita una instancia
+    public static bool CrossesComplete()
+    {
+        bool complete = crossesCollected == 4;
+        Debug.Log($"[CollectibleManagerS] CrossesComplete() (STATIC) called, returns: {complete} (crossesCollected={crossesCollected})");
+        return complete;
     }
 }

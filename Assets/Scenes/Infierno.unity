@@ -1035,15 +1035,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66db5d10405ae4e4ca1d94df0d77cd26, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.168
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66db5d10405ae4e4ca1d94df0d77cd26, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.006
+      value: -0.102
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66db5d10405ae4e4ca1d94df0d77cd26, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.313
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66db5d10405ae4e4ca1d94df0d77cd26, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1097,6 +1097,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c18b9d11a33c31a43a90be99742a9fc3, type: 2}
+    - target: {fileID: 5465940246521907071, guid: 66db5d10405ae4e4ca1d94df0d77cd26, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0139
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465940246521907071, guid: 66db5d10405ae4e4ca1d94df0d77cd26, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0017
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -840777845830954692, guid: 66db5d10405ae4e4ca1d94df0d77cd26, type: 3}
@@ -2821,7 +2829,7 @@ Transform:
   m_GameObject: {fileID: 131573590}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.36, y: -0.92, z: -0.76}
+  m_LocalPosition: {x: -0.168, y: -0.102, z: -0.313}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4089,6 +4097,7 @@ MonoBehaviour:
   rotationSpeed: 45
   itemCounter: {fileID: 0}
   crossCounter: {fileID: 0}
+  crossBonusMessage: {fileID: 0}
   totalItemsScene: 2
   collectibleTag: Collectible
   crossTag: Cruz
@@ -10016,7 +10025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minWidth: 0
   maxWidth: 58.6
-  speed: 4
+  speed: 20
 --- !u!1001 &501944174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17256,7 +17265,7 @@ Transform:
   m_GameObject: {fileID: 903326353}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.099999905, y: 0.029999971, z: 0}
+  m_LocalPosition: {x: 0.1, y: 1.67, z: -0.919}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17569,15 +17578,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 255.23
+      value: 187.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.37
+      value: 32.73
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 66.12
+      value: -10.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19338,6 +19347,7 @@ MonoBehaviour:
   rotationSpeed: 45
   itemCounter: {fileID: 0}
   crossCounter: {fileID: 1370775755}
+  crossBonusMessage: {fileID: 0}
   totalItemsScene: 2
   collectibleTag: Collectible
   crossTag: Cruz
@@ -21146,15 +21156,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 188.6
+      value: 623.33
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 32.87
+      value: 42.59
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.04
+      value: 7.38
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -21371,6 +21381,7 @@ MonoBehaviour:
   rotationSpeed: 45
   itemCounter: {fileID: 0}
   crossCounter: {fileID: 1370775755}
+  crossBonusMessage: {fileID: 0}
   totalItemsScene: 2
   collectibleTag: Collectible
   crossTag: Cruz
@@ -22094,6 +22105,7 @@ MonoBehaviour:
   rotationSpeed: 45
   itemCounter: {fileID: 0}
   crossCounter: {fileID: 1370775755}
+  crossBonusMessage: {fileID: 0}
   totalItemsScene: 2
   collectibleTag: Collectible
   crossTag: Cruz
@@ -23755,15 +23767,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 375.2
+      value: 253.52
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.96
+      value: 32.05
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25.49
+      value: 66.81
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27849,6 +27861,7 @@ MonoBehaviour:
   rotationSpeed: 45
   itemCounter: {fileID: 1269865681}
   crossCounter: {fileID: 0}
+  crossBonusMessage: {fileID: 0}
   totalItemsScene: 2
   collectibleTag: Collectible
   crossTag: Cruz
@@ -28671,7 +28684,7 @@ Transform:
   m_GameObject: {fileID: 1461446352}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 263.1, y: 36.73, z: 5.98}
+  m_LocalPosition: {x: -2.9, y: 1.37, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31985,6 +31998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pentagrama
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c646d5705f4ec84b841d3823fdeefdd, type: 3}
+      propertyPath: m_TagString
+      value: PortalCielo
+      objectReference: {fileID: 0}
     - target: {fileID: 1171549304580213878, guid: 0c646d5705f4ec84b841d3823fdeefdd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -31992,7 +32009,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c646d5705f4ec84b841d3823fdeefdd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1762436582}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c646d5705f4ec84b841d3823fdeefdd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1762436583}
   m_SourcePrefab: {fileID: 100100000, guid: 0c646d5705f4ec84b841d3823fdeefdd, type: 3}
 --- !u!1 &1649899994
 GameObject:
@@ -34377,6 +34400,45 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.1, y: 0.085, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1762436580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c646d5705f4ec84b841d3823fdeefdd, type: 3}
+  m_PrefabInstance: {fileID: 1644165662}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1762436582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762436580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60503163f519a6a46b14d24eef8ba438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portalMessageText: {fileID: 1370775755}
+--- !u!65 &1762436583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762436580}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09, y: 0.04, z: 0.09}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1768111236 stripped
 GameObject:
@@ -36912,15 +36974,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 625.2
+      value: 374
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40.800003
+      value: 31.66
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.320002
+      value: -26.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94ead7c589c7308468779bb7d382589d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -38422,6 +38484,7 @@ MonoBehaviour:
   rotationSpeed: 45
   itemCounter: {fileID: 0}
   crossCounter: {fileID: 1370775755}
+  crossBonusMessage: {fileID: 0}
   totalItemsScene: 2
   collectibleTag: Collectible
   crossTag: Cruz
@@ -41920,8 +41983,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDepth: 0
   maxDepth: 3
-  forwardSpeed: 4
-  backwardSpeed: 1
+  forwardSpeed: 10
+  backwardSpeed: 4
   startMovingForward: 1
   startDelay: 0
   shrinkAxis: 0
