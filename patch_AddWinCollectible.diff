@@ -1,0 +1,79 @@
+using UnityEngine;
+using TMPro;
+
+=======
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
+
+>>>>>>> REPLACE
+<<<<<<< SEARCH
+    public string crossTag = "Cruz"; // Tag for crosses
+    public string rosarioTag = "Rosario"; // Tag for rosarios
+
+    private static int itemsCollected = 0;
+    private static int crossesCollected = 0; 
+    private static int rosariosCollected = 0; // Counter for rosarios
+=======
+    public string crossTag = "Cruz"; // Tag for crosses
+    public string rosarioTag = "Rosario"; // Tag for rosarios
+    public string winTag = "Win"; // Tag for win collectible
+
+    private static int itemsCollected = 0;
+    private static int crossesCollected = 0; 
+    private static int rosariosCollected = 0; // Counter for rosarios
+>>>>>>> REPLACE
+<<<<<<< SEARCH
+        collectibles.Remove(obj);
+
+        if (obj.CompareTag(crossTag))
+        {
+            crossesCollected++;
+            Debug.Log($"[CollectibleManagerS] Cross collected. Current crossesCollected: {crossesCollected}");
+            UpdateCrossesUI();
+        }
+        else if (obj.CompareTag(rosarioTag))
+        {
+            rosariosCollected++;
+            Debug.Log($"[CollectibleManagerS] Rosario collected. Current rosariosCollected: {rosariosCollected}");
+            if (rosarioCounter != null)
+                rosarioCounter.text = $"{rosariosCollected}";
+        }
+        else
+        {
+            itemsCollected++;
+            UpdatedCounterUI();
+        }
+
+        Destroy(obj.gameObject);
+=======
+        collectibles.Remove(obj);
+
+        if (obj.CompareTag(winTag))
+        {
+            int nextSceneIndex = SceneManager.GetActiveScene().buildIndex - 3;
+            Debug.Log($"[CollectibleManagerS] Win collectible obtained! Loading scene with buildIndex: {nextSceneIndex}");
+            SceneManager.LoadScene(nextSceneIndex);
+            return; // Stop further processing after win
+        }
+        else if (obj.CompareTag(crossTag))
+        {
+            crossesCollected++;
+            Debug.Log($"[CollectibleManagerS] Cross collected. Current crossesCollected: {crossesCollected}");
+            UpdateCrossesUI();
+        }
+        else if (obj.CompareTag(rosarioTag))
+        {
+            rosariosCollected++;
+            Debug.Log($"[CollectibleManagerS] Rosario collected. Current rosariosCollected: {rosariosCollected}");
+            if (rosarioCounter != null)
+                rosarioCounter.text = $"{rosariosCollected}";
+        }
+        else
+        {
+            itemsCollected++;
+            UpdatedCounterUI();
+        }
+
+        Destroy(obj.gameObject);

@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class CollectibleManagerS : MonoBehaviour
 {
@@ -11,26 +13,31 @@ public class CollectibleManagerS : MonoBehaviour
 
     [Header("Sistema Recolección")]
     public TextMeshProUGUI itemCounter;
-    public TextMeshProUGUI crossCounter; // New UI element for crosses count
-    public TextMeshProUGUI crossBonusMessage; // New UI element for bonus message
+    public TextMeshProUGUI crossCounter; // UI element for crosses count
+    public TextMeshProUGUI crossBonusMessage; // UI element for bonus message
     public int totalItemsScene = 2;
     public string collectibleTag = "Collectible";
-    public string crossTag = "Cruz"; // Assuming crosses have this tag
-    
-    // 🔑 Mantenemos el conteo de cruces estático (global)
+    public string crossTag = "Cruz"; // Tag for crosses
+    public string rosarioTag = "Rosario"; // Tag for rosarios
+    public string winTag = "Win"; // Tag for win collectible
+
     private static int itemsCollected = 0;
     private static int crossesCollected = 0; 
+    private static int rosariosCollected = 0; // Counter for rosarios
 
     [Header("Lista de objetos")]
     public List<Transform> collectibles = new List<Transform>();
+
+    [Header("UI Rosario")]
+    public TextMeshProUGUI rosarioCounter; // UI element for rosario count
+
     private Dictionary<Transform, Vector3> startPosition = new Dictionary<Transform, Vector3>();
 
     [Header("Referencias")]
-    [SerializeField] private GameTimer timer;     // ⬅️ arrástralo en el Inspector
+    [SerializeField] private GameTimer timer;     // Assign in inspector
 
     void Start()
     {
-        // fallback por si olvidaste asignarlo
         if (timer == null) timer = FindObjectOfType<GameTimer>(true);
 
         foreach (var obj in collectibles)
@@ -68,7 +75,6 @@ public class CollectibleManagerS : MonoBehaviour
     {
         if (!collectibles.Contains(obj)) return;
 
-        // ⬇️ SUMA TIEMPO si este ítem tiene TimeBonus
         var bonus = obj.GetComponent<TimeBonus>();
         if (bonus != null)
         {
@@ -86,12 +92,25 @@ public class CollectibleManagerS : MonoBehaviour
 
         collectibles.Remove(obj);
 
-        // Check if collectible is a cross (by tag)
-        if (obj.CompareTag(crossTag))
+        if (obj.CompareTag(winTag))
+        {
+            int nextSceneIndex = SceneManager.GetActiveScene().buildIndex - 2;
+            Debug.Log($"[CollectibleManagerS] Win collectible obtained! Loading scene with buildIndex: {nextSceneIndex}");
+            SceneManager.LoadScene(nextSceneIndex);
+            return; // Stop further processing after win
+        }
+        else if (obj.CompareTag(crossTag))
         {
             crossesCollected++;
             Debug.Log($"[CollectibleManagerS] Cross collected. Current crossesCollected: {crossesCollected}");
             UpdateCrossesUI();
+        }
+        else if (obj.CompareTag(rosarioTag))
+        {
+            rosariosCollected++;
+            Debug.Log($"[CollectibleManagerS] Rosario collected. Current rosariosCollected: {rosariosCollected}");
+            if (rosarioCounter != null)
+                rosarioCounter.text = $"{rosariosCollected}";
         }
         else
         {
@@ -101,8 +120,7 @@ public class CollectibleManagerS : MonoBehaviour
 
         Destroy(obj.gameObject);
 
-        // DEBUG: Log current counts after destruction
-        Debug.Log($"[CollectibleManagerS] Collect(): crossesCollected={crossesCollected}, itemsCollected={itemsCollected}, collectibles.Count={collectibles.Count}");
+        Debug.Log($"[CollectibleManagerS] Collect(): crossesCollected={crossesCollected}, rosariosCollected={rosariosCollected}, itemsCollected={itemsCollected}, collectibles.Count={collectibles.Count}");
     }
 
     void UpdatedCounterUI()
@@ -127,13 +145,22 @@ public class CollectibleManagerS : MonoBehaviour
                 crossBonusMessage.text = "";
             }
         }
+
+        if (rosarioCounter != null)
+            rosarioCounter.text = $"{rosariosCollected}";
     }
 
-    // 🔑 CAMBIO CLAVE: El método es estático y no necesita una instancia
     public static bool CrossesComplete()
     {
         bool complete = crossesCollected == 4;
         Debug.Log($"[CollectibleManagerS] CrossesComplete() (STATIC) called, returns: {complete} (crossesCollected={crossesCollected})");
+        return complete;
+    }
+
+    public static bool RosariosComplete()
+    {
+        bool complete = rosariosCollected == 2;
+        Debug.Log($"[CollectibleManagerS] RosariosComplete() (STATIC) called, returns: {complete} (rosariosCollected={rosariosCollected})");
         return complete;
     }
 }

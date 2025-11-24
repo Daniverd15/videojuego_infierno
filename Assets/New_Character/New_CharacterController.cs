@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 [RequireComponent(typeof(CharacterController))]
 
 public class New_CharacterController : MonoBehaviour
@@ -17,11 +18,17 @@ public class New_CharacterController : MonoBehaviour
     [Header("Referenciación")]
     public Transform cameraTransform;
     public Animator animator;
+    public SurfaceDetection surfaceDetection;
+
+    [Tooltip("Velocity to launch player when on ThrowingPlatform")]
+    public Vector3 throwingVelocity = new Vector3(0f, 15f, 5f);
 
     private CharacterController characterController;
     private Vector3 Velocity;
     private float currentSpeed;
     private float yaw;
+
+    private bool launchedFromThrowingPlatform = false;
 
     public bool IsMoving { get; private set; }
     public Vector2 CurrentInput { get; private set; }
@@ -41,9 +48,31 @@ public class New_CharacterController : MonoBehaviour
         updateAnimator();
     }
 
+    /// <summary>
+    /// Launch the player with a specific velocity.
+    /// This method can be called externally to apply a custom launch velocity.
+    /// </summary>
+    /// <param name="launchVelocity">The velocity vector to apply to the player.</param>
+    public void LaunchPlayer(Vector3 launchVelocity)
+    {
+        // Prevent multiple launches in a short time
+        if (!launchedFromThrowingPlatform)
+        {
+            launchedFromThrowingPlatform = true;
+            Velocity = launchVelocity;
+            animator?.SetBool("isJumping", true);
+        }
+    }
+
     void HandleMovement()
     {
         IsGrounded = characterController.isGrounded;
+
+        // Reset launch flag when grounded
+        if (IsGrounded) 
+        {
+            launchedFromThrowingPlatform = false;
+        }
 
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -61,10 +90,11 @@ public class New_CharacterController : MonoBehaviour
         }
 
         // Detectar si estamos sobre una plataforma móvil (por parenting)
-        bool onPlatform = transform.parent != null && transform.parent.CompareTag("MovingPlatform");
+        bool onMovingPlatform = transform.parent != null && transform.parent.CompareTag("MovingPlatform");
+        bool onThrowingPlatform = surfaceDetection != null && surfaceDetection.IsOnSurfaceTag("ThrowingPlatform");
 
         // Si no está en plataforma, usar gravedad normal
-        if (!onPlatform)
+        if (!onMovingPlatform && !onThrowingPlatform)
         {
             if (IsGrounded && Velocity.y < 0f)
             {
@@ -81,8 +111,10 @@ public class New_CharacterController : MonoBehaviour
         }
         else
         {
-            // Si está sobre una plataforma, mantenerlo pegado a ella sin saltitos
+            // Si está sobre una plataforma móvil o plataforma que lanza, mantenerlo pegado a ella sin saltitos
             Velocity.y = -2f;
+
+            // Removed auto-launch to avoid duplicate and continuous launching behaviour
         }
 
         // Aplicar movimiento
@@ -119,5 +151,16 @@ public class New_CharacterController : MonoBehaviour
         animator?.SetFloat("Speed", SpeedPercent, 0.1f, Time.deltaTime);
         animator?.SetBool("IsGrounded", IsGrounded);
         animator?.SetFloat("VerticalSpeed", Velocity.y);
+    }
+
+    public void TeleportTo(Vector3 position)
+    {
+        // Reset velocity so player doesn't fall immediately
+        Velocity = Vector3.zero;
+        transform.position = position;
+        if (animator != null)
+        {
+            animator.SetBool("isJumping", false);
+        }
     }
 }

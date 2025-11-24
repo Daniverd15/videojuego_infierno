@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cielo.unity
     guid: 683a0ca951e647b49b4e4ca525b808ba
+  - enabled: 1
+    path: Assets/Scenes/Infierno 1.unity
+    guid: 2e467b41f75a8b1429cac9eba0e3987c
   m_configObjects: {}
