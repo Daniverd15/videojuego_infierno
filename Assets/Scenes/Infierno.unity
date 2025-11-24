@@ -828,7 +828,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (42)
@@ -840,7 +840,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1129,111 +1129,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 96854117}
   m_SourcePrefab: {fileID: 100100000, guid: 66db5d10405ae4e4ca1d94df0d77cd26, type: 3}
---- !u!1 &52631967
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 52631968}
-  - component: {fileID: 52631970}
-  - component: {fileID: 52631969}
-  - component: {fileID: 52631971}
-  m_Layer: 0
-  m_Name: pCube2 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &52631968
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52631967}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0031740188, y: 0.036302976, z: 0.0011175823}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 463651368}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &52631969
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52631967}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &52631970
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52631967}
-  m_Mesh: {fileID: 5302568919011541938, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
---- !u!65 &52631971
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52631967}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.10807637, y: 0.011729984, z: 0.08657114}
-  m_Center: {x: 0, y: 0.0000000037252903, z: 0.0000000018626451}
 --- !u!1 &53641734 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
@@ -1375,7 +1270,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (53)
@@ -1383,7 +1278,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1458,7 +1353,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (35)
@@ -1470,7 +1365,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1892,7 +1787,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (40)
@@ -1904,7 +1799,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3287,7 +3182,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (54)
@@ -3295,7 +3190,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4229,6 +4124,8 @@ GameObject:
   - component: {fileID: 191921300}
   - component: {fileID: 191921307}
   - component: {fileID: 191921306}
+  - component: {fileID: 191921309}
+  - component: {fileID: 191921308}
   m_Layer: 0
   m_Name: DeadZone
   m_TagString: FallingPlatform
@@ -4311,7 +4208,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 53005537e1bb7944a9f0599c0293aeed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4401,6 +4298,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &191921308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191921299}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90cdf4268ee82df48a8b69c85a664e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSpeedU: 0
+  scrollSpeedV: 0
+--- !u!114 &191921309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191921299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90cdf4268ee82df48a8b69c85a664e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSpeedU: 0.01
+  scrollSpeedV: 0.01
 --- !u!1001 &194333138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4464,7 +4389,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (38)
@@ -4476,7 +4401,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4548,7 +4473,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (63)
@@ -4556,7 +4481,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4950,7 +4875,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (21)
@@ -4962,7 +4887,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5273,7 +5198,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (52)
@@ -5281,7 +5206,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5917,7 +5842,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (17)
@@ -5929,7 +5854,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6452,7 +6377,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (65)
@@ -6460,7 +6385,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7780,7 +7705,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (33)
@@ -7792,7 +7717,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8053,7 +7978,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (26)
@@ -8065,7 +7990,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8248,7 +8173,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (30)
@@ -8260,7 +8185,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9070,7 +8995,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (47)
@@ -9082,7 +9007,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9368,11 +9293,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondsToAdd: 5
---- !u!4 &463651368 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
-  m_PrefabInstance: {fileID: 1867750636}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &466076242 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
@@ -10343,7 +10263,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (61)
@@ -10351,7 +10271,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10903,7 +10823,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (18)
@@ -10915,7 +10835,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11093,7 +11013,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (44)
@@ -11105,7 +11025,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11283,7 +11203,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (46)
@@ -11295,7 +11215,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11398,7 +11318,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (64)
@@ -11406,7 +11326,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15936,7 +15856,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (7)
@@ -15948,7 +15868,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16463,7 +16383,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (23)
@@ -16475,7 +16395,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16661,7 +16581,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (56)
@@ -16669,7 +16589,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16741,7 +16661,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (34)
@@ -16753,7 +16673,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16961,7 +16881,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (48)
@@ -16973,7 +16893,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17045,7 +16965,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (41)
@@ -17057,7 +16977,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18915,7 +18835,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (31)
@@ -18927,7 +18847,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19880,7 +19800,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (49)
@@ -19892,7 +19812,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20391,7 +20311,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (32)
@@ -20403,7 +20323,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22526,7 +22446,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (10)
@@ -22538,7 +22458,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22942,7 +22862,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (28)
@@ -22954,7 +22874,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23026,7 +22946,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (15)
@@ -23038,7 +22958,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23190,7 +23110,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (14)
@@ -23202,7 +23122,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23495,7 +23415,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (45)
@@ -23507,7 +23427,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24168,7 +24088,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (9)
@@ -24180,7 +24100,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24717,7 +24637,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (39)
@@ -24729,7 +24649,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26175,7 +26095,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (59)
@@ -26183,7 +26103,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26255,7 +26175,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (60)
@@ -26263,7 +26183,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26434,7 +26354,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (19)
@@ -26446,7 +26366,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27077,7 +26997,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma
@@ -27085,7 +27005,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28003,7 +27923,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (25)
@@ -28015,7 +27935,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28834,7 +28754,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (22)
@@ -28846,7 +28766,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29024,7 +28944,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (51)
@@ -29036,7 +28956,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29684,7 +29604,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (58)
@@ -29692,7 +29612,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29976,7 +29896,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (57)
@@ -29984,7 +29904,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30492,7 +30412,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (62)
@@ -30500,7 +30420,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30682,7 +30602,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (3)
@@ -30694,7 +30614,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31178,7 +31098,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (24)
@@ -31190,7 +31110,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32141,7 +32061,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (29)
@@ -32153,7 +32073,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33318,7 +33238,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (36)
@@ -33330,7 +33250,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33402,7 +33322,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (12)
@@ -33414,7 +33334,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33566,7 +33486,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (6)
@@ -33578,7 +33498,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33900,7 +33820,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (11)
@@ -33912,7 +33832,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34586,7 +34506,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (2)
@@ -34594,7 +34514,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34936,7 +34856,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (43)
@@ -34948,7 +34868,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35400,7 +35320,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (37)
@@ -35412,7 +35332,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37204,7 +37124,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (1)
@@ -37212,13 +37132,10 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 52631968}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       insertIndex: -1
@@ -37937,7 +37854,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (50)
@@ -37949,7 +37866,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38810,7 +38727,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (20)
@@ -38822,7 +38739,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39026,7 +38943,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (5)
@@ -39038,7 +38955,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39478,7 +39395,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (27)
@@ -39490,7 +39407,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39562,7 +39479,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (66)
@@ -39570,7 +39487,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39854,7 +39771,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (8)
@@ -39866,7 +39783,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40371,7 +40288,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (16)
@@ -40383,7 +40300,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40455,7 +40372,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (55)
@@ -40463,7 +40380,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40945,7 +40862,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (67)
@@ -40953,7 +40870,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41333,7 +41250,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (4)
@@ -41345,7 +41262,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41886,7 +41803,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aa8bddfc15ea014395d0158dd3ef902, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Name
       value: Plataforma (13)
@@ -41898,7 +41815,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 0e731bbf8010dc64e8293506c9448575, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed7a4c4538d41af41b8562b8ab11d208, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfa342a37ea2e749911402fbda135c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
